@@ -1,0 +1,102 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;  /* Reduce padding for better responsiveness */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 120vh; /* Ensure the page fills the screen height */
+}
+
+.resume-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow the layout to wrap on smaller screens */
+    background-color: white;
+    width: 80%;
+    max-width: 1200px; /* Max width for better control on large screens */
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section Styling */
+.left-section {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    width: 35%;
+    text-align: center;
+    border-right: 2px solid #e63946; /* Fixed border-right issue */
+    box-sizing: border-box;
+}
+
+.profile-picture {
+    width: 100%;
+    max-width: 350px; /* Ensure it doesn't overflow */
+    height: auto;
+    margin-top: 20px; /* Adjusted margin */
+    border-radius: 50%;
+    border: 5px solid #e63946;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem; /* Adjusted for better responsiveness */
+    margin: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem; /* Adjusted for better responsiveness */
+    padding: 2%;
+    margin: 20px 0 10px;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #e63946;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+ul {
+    list-style-type: disc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+ul li {
+    margin: 5px 0;
+    font-size: 1.25rem; /* Adjusted for readability */
+}
+
+/* Right Section Styling */
+.right-section {
+    padding: 20px;
+    width: 65%;
+    box-sizing: border-box;
+}
+
+button {
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1.25rem; /* Adjusted for better readability */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: #ff737c;
+}
+
+p {
+    font-size: 1.25rem; /* Adjusted for better readability */
+}
+
+ul {
+    font-size: 1.25rem; /* Adjusted for better readability */
+}
