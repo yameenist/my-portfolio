@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;  /* Reduce padding for better responsiveness */
+    padding: 20px;
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
@@ -14,8 +14,8 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow the layout to wrap on smaller screens */
     background-color: white;
-    width: 80%;
-    max-width: 1200px; /* Max width for better control on large screens */
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 80px rgba(0, 0, 0, 0.1);
@@ -26,7 +26,7 @@ body {
     background-color: #2c2c2c;
     color: white;
     padding: 20px;
-    width: 35%;
+    width: 35%; /* Default width for larger screens */
     text-align: center;
     border-right: 2px solid #e63946; /* Fixed border-right issue */
     box-sizing: border-box;
@@ -36,21 +36,21 @@ body {
     width: 100%;
     max-width: 350px; /* Ensure it doesn't overflow */
     height: auto;
-    margin-top: 20px; /* Adjusted margin */
+    margin-top: 20px;
     border-radius: 50%;
     border: 5px solid #e63946;
     margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 3rem; /* Adjusted for better responsiveness */
+    font-size: 3rem;
     margin: 10px 0;
     margin-bottom: 30px;
     text-align: center;
 }
 
 h3 {
-    font-size: 2rem; /* Adjusted for better responsiveness */
+    font-size: 2rem;
     padding: 2%;
     margin: 20px 0 10px;
     color: black;
@@ -74,7 +74,7 @@ ul li {
 /* Right Section Styling */
 .right-section {
     padding: 20px;
-    width: 65%;
+    width: 65%; /* Default width for larger screens */
     box-sizing: border-box;
 }
 
@@ -86,7 +86,7 @@ button {
     margin-top: 10px;
     font-size: 1.25rem; /* Adjusted for better readability */
     padding: 10px 20px;
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -99,4 +99,74 @@ p {
 
 ul {
     font-size: 1.25rem; /* Adjusted for better readability */
+}
+
+/* ----- Media Queries for Mobile View ----- */
+
+/* For tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column; /* Stack sections vertically */
+        box-shadow: none; /* Simplify the design for mobile */
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%; /* Take full width on smaller screens */
+        text-align: center; /* Center-align content */
+        border-right: none; /* Remove the border */
+        padding: 15px;
+    }
+
+    .profile-picture {
+        max-width: 200px; /* Smaller profile picture for mobile */
+        margin: 10px auto; /* Center the image */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduce heading size for better fit */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Smaller subheadings */
+        padding: 10px;
+        margin: 15px 0;
+    }
+
+    ul li {
+        font-size: 1rem; /* Reduce font size for lists */
+    }
+
+    button {
+        font-size: 1rem; /* Smaller button text */
+        padding: 8px 16px; /* Adjust padding for smaller buttons */
+    }
+}
+
+/* For very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduce padding for very small screens */
+    }
+
+    .resume-container {
+        border-radius: 0; /* Remove rounded corners */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Further reduce heading size */
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    ul li {
+        font-size: 0.9rem; /* Smaller font for list items */
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
 }
